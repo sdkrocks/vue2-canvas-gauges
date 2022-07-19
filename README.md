@@ -5,7 +5,7 @@ Canvas gauges 2 component is based on https://www.npmjs.com/package/vue-canvas-g
 ## Installation
 
 ```
-$ yarn add vue2-canvas-gauges --save
+$ yarn add vue2-gauges --save
 ```
 
 ## Examples
