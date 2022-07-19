@@ -3,42 +3,46 @@
 </template>
 
 <script>
-import { RadialGauge } from 'canvas-gauges'
+import { RadialGauge } from "canvas-gauges";
 
 export default {
-
   props: {
     value: Number,
     options: {
       type: Object,
-      default: () => ({})
-    }
+      default: () => ({}),
+    },
   },
 
-  data: function () {
+  data() {
     return {
-      chart: null
-    }
+      chart: null,
+    };
   },
 
-  mounted: function () {
-    this.chart = new RadialGauge(Object.assign({}, this.options, { renderTo: this.$el, value: this.value }))
-      .draw()
+  mounted() {
+    this.chart = new RadialGauge(
+      Object.assign({}, this.options, { renderTo: this.$el, value: this.value })
+    ).draw();
   },
 
-  beforeDestroy: function () {
-    this.chart.destroy()
+  beforeDestroy() {
+    this.chart.destroy();
   },
 
   watch: {
-    value: function (val) {
-      this.chart.value = val
+    value(val) {
+      this.chart.value = val;
     },
-    options: function (opt) {
-      this.chart.destroy()
-      this.chart = new RadialGauge(Object.assign({}, this.options, {renderTo: this.$el, value: this.value})).draw()
-    }
-  }
-
-}
+    options(opt) {
+      this.chart.destroy();
+      this.chart = new RadialGauge(
+        Object.assign({}, this.options, {
+          renderTo: this.$el,
+          value: this.value,
+        })
+      ).draw();
+    },
+  },
+};
 </script>

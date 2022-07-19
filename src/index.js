@@ -1,7 +1,4 @@
-import LinearGauge from './LinearGauge'
-import RadialGauge from './RadialGauge'
+import LinearGauge from "./LinearGauge";
+import RadialGauge from "./RadialGauge";
 
-export {
-  LinearGauge,
-  RadialGauge
-}
+export { LinearGauge, RadialGauge };
